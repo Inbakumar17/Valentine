@@ -1,0 +1,93 @@
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at center, #d8b4fe 0%, #c9187c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(145deg, #ffffff 0%, #fff1f2 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+  }
+
+  h1 { color: #111; font-size: 1.6rem; margin-bottom: 12px; }
+  .caption { color: #666; font-size: 0.95rem; min-height: 40px; margin-bottom: 18px; }
+  
+  .buttons { display: flex; justify-content: center; gap: 16px; margin-top: 10px; }
+  button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.3s ease;
+  }
+  #yesBtn { background: #ea042e; color: white; font-weight: 600; box-shadow: 0 8px 18px rgba(255, 77, 109, 0.45); }
+  #noBtn { background: #eee; color: #333; }
+  .highlight-yes { background: #ff1744 !important; transform: scale(1.07); }
+
+  .result { display: none; }
+  #thankYouHeading { color: #ff1744; font-size: 1.8rem; margin-bottom: 5px; }
+  #personalNote { color: #555; font-size: 1.1rem; margin-bottom: 20px; line-height: 1.4; }
+  
+  .next-btn {
+    margin-top: 18px;
+    background: #F63049;
+    color: white;
+    box-shadow: 0 8px 18px rgba(255, 23, 68, 0.5);
+  }
+
+  .letter-page {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #ffe4e6, #fecdd3);
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+  }
+
+  .letter-box {
+    width: 92%;
+    max-width: 760px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 40px 36px;
+    border-radius: 10px;
+    background: #fffefb;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+    position: relative;
+  }
+
+  .letter-text {
+    color: #E83C91;
+    font-size: 1.05rem;
+    line-height: 1.95;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .falling-emoji {
+    position: absolute;
+    top: -50px;
+    pointer-events: none;
+    z-index: 100;
+    animation: fall linear forwards;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
